@@ -28,14 +28,3 @@ class Character {
         return this.attributes.attack * 1.5;  // Example formula for damage calculation
     }
 }
-
-// Example usage
-let charAttributes = {
-    hp: 5000,
-    attack: 300,
-    defense: 150
-};
-
-let myCharacter = new Character('Amber', 'Smith', 'Pyro', 'Bow', charAttributes);
-console.log(myCharacter.displayStats());
-
