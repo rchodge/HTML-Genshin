@@ -4,13 +4,16 @@ class Character {
         this.element = element;   // e.g., Pyro, Anemo
         this.weapon = weapon;     // e.g., Sword, Bow
         this.attributes = attributes; // Object with character's stats
+        this.artifacts=[];
     }
 
     // Example method to get full name
     getFullName() {
         return `${this.firstName}`;
     }
-
+    setArtifact(artifactToAdd){
+        this.artifact.push(artifactToAdd);
+    }
     // Example method to display character's stats
     displayStats() {
         return `
