@@ -64,7 +64,7 @@ class Artifact{
         if (this.level!=this.maxLevel){
             this.level+=1;
         }
-        if (this.rarity==1||this.rarity==1){
+        if (this.rarity==1||this.rarity==0){
         
         }
     }
