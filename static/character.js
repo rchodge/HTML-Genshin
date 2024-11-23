@@ -33,7 +33,7 @@ class Character {
 }
 class Artifact{
     //Based on: https://genshin-impact.fandom.com/wiki/Artifact/Distribution
-    constructor(name,MainStat,SubStats,rarity,ExpList){
+    constructor(name,MainStat,SubStats,rarity,ExpList,type){
         this.name=name;
         this.MainStat=MainStat;
         this.SubStats=SubStats;
@@ -52,6 +52,7 @@ class Artifact{
         }else if(this.rarity==1){
             this.maxLevel=4;
         }
+        this.type=type;
     }
     addExp(expValue){
         this.exp+=expValue;
@@ -63,8 +64,9 @@ class Artifact{
         if (this.level!=this.maxLevel){
             this.level+=1;
         }
-        if (this.level==0){
-            
+        if (this.type!=0||this.type!=1){
+            if (this.maxLevel==4){
+            }
         }
     }
 }
