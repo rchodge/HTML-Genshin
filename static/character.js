@@ -31,3 +31,40 @@ class Character {
         return this.attributes.attack * 1.5;  // Example formula for damage calculation
     }
 }
+class Artifact{
+    //Based on: https://genshin-impact.fandom.com/wiki/Artifact/Distribution
+    constructor(name,MainStat,SubStats,rarity,ExpList){
+        this.name=name;
+        this.MainStat=MainStat;
+        this.SubStats=SubStats;
+        this.rarity=rarity;
+        this.expRequirements=ExpList;
+        this.level=0;
+        this.exp=0;
+        if(this.rarity==5){
+            this.maxLevel=20;
+        }else if(this.rarity==4){
+            this.maxLevel=16;
+        }else if(this.rarity==3){
+            this.maxLevel=12;
+        }else if(this.rarity==2){
+            this.maxLevel=4;
+        }else if(this.rarity==1){
+            this.maxLevel=4;
+        }
+    }
+    addExp(expValue){
+        this.exp+=expValue;
+        while(this.exp>this.expRequirements[this.level]){
+            levelUp();
+        }
+    }
+    levelUp(){
+        if (this.level!=this.maxLevel){
+            this.level+=1;
+        }
+        if (this.level==0){
+            
+        }
+    }
+}
