@@ -53,6 +53,19 @@ class Artifact{
             this.maxLevel=4;
         }
         this.type=type;
+        switch (this.type){
+            case "flower":
+                this.MainStat=""
+            case "goblet":
+                this.MainStat=""
+            case "sands":
+                this.MainStat=""
+            case "circlet":
+                this.MainStat=""
+            case "feather":
+                this.MainStat=""
+            default:
+        }
     }
     addExp(expValue){
         this.exp+=expValue;
@@ -65,7 +78,7 @@ class Artifact{
             this.level+=1;
         }
         if (this.rarity==1||this.rarity==0){
-        
+           
         }
     }
 }
