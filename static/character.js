@@ -52,19 +52,22 @@ class Artifact{
         }else if(this.rarity==1){
             this.maxLevel=4;
         }
+        this.possibleStats=[]
         this.type=type;
         switch (this.type){
             case "flower":
-                this.MainStat=""
+                this.MainStat="HP"
             case "goblet":
-                this.MainStat=""
+                this.MainStat=this.possibleStats[Math.floor(math.Random()*this.possibleStats.length)]
             case "sands":
-                this.MainStat=""
+                this.MainStat=this.possibleStats[Math.floor(Math.Random()*this.possibleStats.length)]
             case "circlet":
-                this.MainStat=""
-            case "feather":
-                this.MainStat=""
+                this.MainStat=this.possibleStats[Math.floor(Math.random()*this.possibleStats.length)]
+            case "plume":
+                this.MainStat="ATK"
             default:
+                console.error(this.type+" does not exist.");
+                
         }
     }
     addExp(expValue){
