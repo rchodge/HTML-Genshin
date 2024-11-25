@@ -80,7 +80,7 @@ class Artifact{
         if (this.level!=this.maxLevel){
             this.level+=1;
         }
-        if (this.level==4){
+        if (this.level==4||this.level==4||this.level==8||this.level==12||this.level==16||this.level==20){
             this.SubStats.append(this.possibleStats[Math.floor(Math.random()*this.possibleStats.length)])
         }
     }
