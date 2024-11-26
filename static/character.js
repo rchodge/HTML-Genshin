@@ -1,3 +1,4 @@
+
 class Character {
     constructor(firstName, element, weapon, attributes) {
         this.firstName = firstName;
@@ -52,17 +53,17 @@ class Artifact{
         }else if(this.rarity==1){
             this.maxLevel=4;
         }
-        this.possibleStats=[]
+        this.possibleStats=$.getJson()
         this.type=type;
         switch (this.type){
             case "flower":
                 this.MainStat="HP"
             case "goblet":
-                this.MainStat=this.possibleStats[Math.floor(math.Random()*this.possibleStats.length)]
+                this.MainStat=this.possibleStats["goblet"][Math.floor(math.Random()*this.possibleStats.length)]
             case "sands":
-                this.MainStat=this.possibleStats[Math.floor(Math.Random()*this.possibleStats.length)]
+                this.MainStat=this.possibleStats["sands"][Math.floor(Math.Random()*this.possibleStats.length)]
             case "circlet":
-                this.MainStat=this.possibleStats[Math.floor(Math.random()*this.possibleStats.length)]
+                this.MainStat=this.possibleStats["circlet"][Math.floor(Math.random()*this.possibleStats.length)]
             case "plume":
                 this.MainStat="ATK"
             default:
